@@ -1,0 +1,5 @@
+licenses/IndicXlit-LICENSE.txt -text
+licenses/ONNX-Runtime-LICENSE.txt -text
+licenses/ONNX-Runtime-ThirdPartyNotices.txt -text
+assets/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+runtime/** -text -whitespace

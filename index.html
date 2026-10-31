@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>தமிழில் எழுதுக — Type Tamil</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="assets/tamil-recompose.js" defer></script>
+  <script src="textarea-caret.js" defer></script>
+  <script src="performance.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <h1>தமிழில் எழுதுக — Type Tamil</h1>
+  <p>Type Tamil using Roman letters. Your text and transliteration stay on this device.</p>
+  <div class="controls">
+    <button id="mode" type="button" aria-pressed="true">Tamil input: on (F6)</button>
+    <p id="status" role="status">Loading</p>
+  </div>
+  <p id="error" role="alert" hidden></p>
+  <label for="editor">Try it here</label>
+  <textarea id="editor" rows="10" spellcheck="false" autocapitalize="off"
+    autofocus placeholder="Try typing naan tamil, then press Space."
+    aria-describedby="keyboard-hint"
+    aria-controls="choices" aria-haspopup="listbox" aria-expanded="false"></textarea>
+  <div id="candidate-popup" hidden>
+    <div id="choices" role="listbox" aria-label="Transliteration choices">
+      <div id="candidates"></div>
+      <button id="literal-candidate" type="button" role="option" data-index="0" hidden></button>
+    </div>
+    <p class="popup-help">1–8 Tamil · 0 Roman · ↑/↓ choose
+Space accepts · Esc closes</p>
+  </div>
+  <p id="keyboard-hint" class="note">Space accepts · ↑/↓ chooses · Enter adds a line · Ctrl+Space re-edits · F6 toggles Tamil</p>
+  <details>
+    <summary>Keyboard help &amp; how it works</summary>
+    <p>Space accepts the first choice even if it is still computing; keep typing.
+      Punctuation accepts a visible choice and inserts that character. Click a choice to accept it without a separator.</p>
+    <p>Press 1–8 to accept that Tamil choice, or 0 to keep the displayed Roman spelling.
+      ↑/↓ and click also select choices.</p>
+    <p>Enter accepts the first choice and adds a newline. After ↑/↓ or Ctrl+Space explores
+      the word, Enter accepts the selected choice and adds a space instead.</p>
+    <p>Ctrl+Space reopens a Tamil word as editable Roman text. Esc restores the original Tamil
+      during re-editing; otherwise it closes choices. F6 works while the textbox has focus.</p>
+    <p>The IndicXlit model runs locally in a browser worker. The first visit loads the model files;
+      you can type while they load. Your text is not uploaded.</p>
+  </details>
+  <aside id="stats" class="note" aria-label="Local performance">
+    <strong>Local performance</strong>
+    <dl>
+      <div><dt>Words transliterated</dt><dd id="word-count">0</dd></div>
+      <div><dt>Editor response</dt><dd id="typing-stats">—</dd></div>
+      <div><dt>Word transliteration</dt><dd id="inference-stats">—</dd></div>
+    </dl>
+    <small>Measured locally in this browser.</small>
+  </aside>
+</body>
+</html>

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "capturedAtUtc": "2026-11-01T00:22:20.101412Z",
+  "environment": {
+    "capturedAtUtc": "2026-11-01T00:21:28.1940451Z",
+    "workflow": "Regression",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+    "powerShellVersion": "7.6.9",
+    "os": "Microsoft Windows NT 10.0.26300.0",
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    }
+  },
+  "execution": {
+    "runtime": "1.23.2",
+    "provider": "wasm",
+    "threads": 1,
+    "hardwareConcurrency": 16
+  },
+  "regression": {
+    "passed": true,
+    "validCases": 30,
+    "invalidCases": 6,
+    "beamWidth": 8,
+    "exactCandidateOrder": true,
+    "scoreTolerance": 0.0001,
+    "maximumScoreDifference": 1.7331636047446253E-06,
+    "runtimeMatches": true,
+    "cacheBehavior": true,
+    "localWorkerResources": true
+  },
+  "editor": {
+    "passed": true,
+    "assertions": 139
+  },
+  "connectedWorkerInitializationFailure": {
+    "passed": true,
+    "seededNonemptyText": true,
+    "expectedText": "Tamil: \u0ba8\u0bbe\u0ba9\u0bcd. Roman: naan tamil.\nKeep this second line intact.",
+    "textAtWorkerStart": "Tamil: \u0ba8\u0bbe\u0ba9\u0bcd. Roman: naan tamil.\nKeep this second line intact.",
+    "preservedText": "Tamil: \u0ba8\u0bbe\u0ba9\u0bcd. Roman: naan tamil.\nKeep this second line intact.",
+    "textUnchanged": true,
+    "stillEditable": true,
+    "status": "Failed",
+    "workerError": {
+      "type": "error",
+      "id": 0,
+      "stage": "Loading runtime"
+    }
+  },
+  "offline": {
+    "passed": true,
+    "staticServerReachable": false,
+    "roman": "pudhiya",
+    "cached": false,
+    "tamilCandidates": true
+  },
+  "timingObservationsMs": {
+    "scope": "One qualification run; full beam width eight; worker execution timings, not end-to-end input latency or a controlled benchmark.",
+    "initialize": 716.5,
+    "corpusMedian": 176.39999997615814,
+    "corpusSlowest": 936.2000000476837,
+    "warmUncachedVendum": 271.19999980926514,
+    "cachedVendum": 0
+  },
+  "workflowCaptureUtc": {
+    "Regression": "2026-11-01T00:21:28.1940451Z",
+    "Editor": "2026-11-01T00:21:59.4009753Z",
+    "Failure": "2026-11-01T00:22:03.8806172Z",
+    "Offline": "2026-11-01T00:22:20.101412Z"
+  }
+}

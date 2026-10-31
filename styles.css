@@ -1,0 +1,29 @@
+:root { font-family: system-ui, sans-serif; color-scheme: light dark; }
+body { max-width: 900px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+textarea { display: block; box-sizing: border-box; width: 100%; margin-top: .5rem;
+  padding: .8rem; font: 1.25rem/1.65 system-ui, sans-serif; }
+.controls { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+.controls #status { margin: 0; min-width: 6rem; font-size: .9rem; color: GrayText; }
+label[for="editor"] { display: block; margin-top: 1rem; }
+details { margin: 1rem 0; }
+summary { cursor: pointer; }
+button { padding: .45rem .8rem; font: inherit; cursor: pointer; }
+button:focus-visible, textarea:focus-visible { outline: 3px solid #5688df; }
+#candidate-popup { position: fixed; z-index: 10; width: 300px; box-sizing: border-box;
+  overflow: auto; padding: .3rem; border: 1px solid GrayText; border-radius: .3rem;
+  background: Canvas; color: CanvasText; box-shadow: 0 3px 12px #0004; }
+#candidates { display: flex; flex-direction: column; gap: .15rem; }
+#candidates button, #literal-candidate { font-size: 1.1rem; line-height: 1.4; padding: .3rem .6rem;
+  text-align: left; border: 0; background: transparent;
+  color: inherit; overflow-wrap: anywhere; }
+#candidates button::before, #literal-candidate::before { content: attr(data-index) ". "; }
+#candidates button[aria-selected="true"], #literal-candidate[aria-selected="true"] { background: Highlight; color: HighlightText; }
+#candidates button:disabled { color: GrayText; background: transparent; cursor: wait; }
+.popup-help { margin: .3rem; font-size: .75rem; white-space: pre-line; min-height: 3em; }
+#literal-candidate { width: 100%; margin-top: .3rem; padding-top: .6rem; border-top: 1px solid GrayText; }
+#error { border: 1px solid #c44; padding: .6rem; }
+.note { font-size: .9rem; }
+#stats { border: 1px solid GrayText; border-radius: .3rem; padding: .6rem .8rem; }
+#stats dl { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin: .5rem 0; }
+#stats dd { margin: 0; font-variant-numeric: tabular-nums; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .8rem; }
